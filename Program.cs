@@ -1,4 +1,6 @@
 ﻿using System;
+using WIZC.Chara;
+using WIZC.Common;
 
 namespace Wiz_Clone_Console
 {
@@ -6,7 +8,11 @@ namespace Wiz_Clone_Console
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+          Console.WriteLine("Run Start");
+          Character c=new Character();
+          Console.WriteLine(c);
+          
+          Console.WriteLine("C={0} D={1}",Character.N,Data.N);
         }
     }
 }

@@ -1,11 +1,32 @@
 using System;
+using System.Collections.Generic;
+using System.Collections;
 using Newtonsoft.Json;
 using System.Runtime;
 
-namespace WizClone{
+namespace WIZC{
+
+  namespace Common{
+    abstract class Data{
+
+      public static int N=10;
+    }
+
+    abstract class Master<T>
+    where T:Data
+    {
+      public List<T> loadMaster(){
+        return null;
+      }
+      
+    }
+
+  }
+
   namespace Chara{
 
-    class Character{
+    class Character:WIZC.Common.Data{
+
     
       public static void import(){
         var json=JsonConvert.SerializeObject("掴もうぜ");
