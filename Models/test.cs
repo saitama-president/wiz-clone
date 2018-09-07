@@ -1,15 +1,23 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Common;
 
-namespace WizClone{
-  class Test{
-/*    public static void Main(string[] args){
-
-      Console.WriteLine("探そうぜ"); 
-
-      Chara.Character.import();
-    }    
-*/
+namespace WizClone
+{
+  class Test
+  {
+    
+    
   }
+
+  class TestData:Data{
+
+  }
+
+  class TestMaster : Master<TestData>
+  {
+    public int N;
+  }
+
 }

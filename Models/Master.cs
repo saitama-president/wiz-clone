@@ -16,7 +16,7 @@ namespace Common
   abstract class Master<T>
   where T : Data
   {
-    public List<T> loadMaster(string path)
+    public static List<T> loadMaster(string path)
     {
 
       using(StreamReader　r=new StreamReader(
@@ -25,9 +25,8 @@ namespace Common
         )){
           
 
-          JsonConvert.DeserializeObject<List<T>>(r.ReadToEnd());
+          return JsonConvert.DeserializeObject<List<T>>(r.ReadToEnd());
         }
-      return null;
     }
 
   }

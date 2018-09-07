@@ -22,6 +22,7 @@ namespace WIZC{
       }
     }
 
+
     class CharacterClass{
       string name;
       
