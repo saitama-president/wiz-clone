@@ -12,12 +12,15 @@ namespace WizClone
   }
 
   class TestData:Data{
+    public int A;
+    public override string ToString()=>$"{this.A}";
 
   }
 
   class TestMaster : Master<TestData>
   {
     public int N;
+
   }
 
 }

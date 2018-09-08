@@ -13,12 +13,14 @@ namespace Wiz_Clone_Console
           Console.WriteLine(c);
           
           Console.WriteLine("C={0} D={1}",Character.N,Data.N);
-
-    
-
-          Console.WriteLine("探そうぜ"); 
+          Console.WriteLine("BEGIN"); 
 
           var v=WizClone.TestMaster.loadMaster("test.json");
+          Console.WriteLine("FE"); 
+          foreach(WizClone.TestData t in v){
+            Console.WriteLine(t);
+        
+          }
           Console.WriteLine(v);
     
         }
