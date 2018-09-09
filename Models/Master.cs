@@ -7,16 +7,16 @@ using System.IO;
 using System.Text;
 namespace Common
 {
-  abstract class Data
+  public abstract class Data
   {
 
     public static int N = 10;
   }
 
-  abstract class Master<T>
-  where T : Data
+  public abstract class Master<TT>
+  where TT : Data
   {
-    public static List<T> loadMaster(string path)
+    public static List<TT> loadMaster(string path)
     {
 
       using(StreamReader　r=new StreamReader(
@@ -24,9 +24,11 @@ namespace Common
         Encoding.UTF8
         )){
           
-
-          return JsonConvert.DeserializeObject<List<T>>(r.ReadToEnd());
+          
+          return JsonConvert.DeserializeObject<List<TT>>(
+            r.ReadToEnd());
         }
+        return null;
     }
 
   }

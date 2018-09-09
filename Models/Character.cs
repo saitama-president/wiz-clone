@@ -10,20 +10,13 @@ namespace WIZC{
 
   namespace Chara{
 
-    class Character:Common.Data{
-
+    public class Character:Common.Data{
+      public string Name="TEST";
     
-      public static void import(){
-        var json=JsonConvert.SerializeObject("掴もうぜ");
-
-        string jsoned=JsonConvert.DeserializeObject<string>(json);
-        
-        Console.WriteLine(jsoned);
-      }
     }
 
 
-    class CharacterClass{
+    public class CharacterClass{
       string name;
       
     }
