@@ -3,10 +3,15 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+      <PackagNeReference Include="Newtonsoft.Json" Version="*" />
+      <Reference Include="Newtonsoft.Json" />
+      <Compile Include="Models/*.cs" Exclude="Editor/" />
+      <Compile Include="*.cs" Exclude="UnityObj/" />
+
   </ItemGroup>
 
 </Project>
